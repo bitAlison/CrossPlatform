@@ -2,16 +2,33 @@ import * as React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SharedTransition, withSpring } from 'react-native-reanimated';
+import { SharedTransition, ReduceMotion, Easing, withSpring } from 'react-native-reanimated';
+
 import Animated from 'react-native-reanimated';
 
 const customTransition = SharedTransition.custom((values) => {
   'worklet';
   return {
-    height: withSpring(values.targetHeight),
-    width: withSpring(values.targetWidth),
-    originX: withSpring(values.targetOriginX),
-    originY: withSpring(values.targetOriginY),
+    height: withSpring(values.targetHeight, {
+      duration: 2000,
+      easing: Easing.inOut(Easing.exp),
+      reduceMotion: ReduceMotion.System,
+    }),
+    width: withSpring(values.targetWidth, {
+      duration: 2000,
+      easing: Easing.inOut(Easing.exp),
+      reduceMotion: ReduceMotion.System,
+    }),
+    originX: withSpring(values.targetOriginX, {
+      duration: 2000,
+      easing: Easing.inOut(Easing.exp),
+      reduceMotion: ReduceMotion.System,
+    }),
+    originY: withSpring(values.targetOriginY, {
+      duration: 2000,
+      easing: Easing.inOut(Easing.exp),
+      reduceMotion: ReduceMotion.System,
+    }),
   };
 });
 
@@ -28,7 +45,7 @@ function HomeScreen({ navigation }) {
         source={{ uri: 'https://picsum.photos/id/39/200' }}
         style={{ width: 300, height: 300 }}
         sharedTransitionTag="tag"
-        sharedTransitionStyle={customTransition} 
+        sharedTransitionStyle={customTransition}
       />
     </View>
   );
@@ -42,7 +59,7 @@ function DetailsScreen({ navigation }) {
         source={{ uri: 'https://picsum.photos/id/39/200' }}
         style={{ width: 100, height: 100 }}
         sharedTransitionTag="tag"
-        sharedTransitionStyle={customTransition} 
+        sharedTransitionStyle={customTransition}
       />
     </View>
   );
