@@ -9,6 +9,6 @@ cd .\materialBottomTabsNavigator\
 
 npx expo install react-native-web react-dom @expo/metro-runtime
 
-npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+npm install @react-navigation/material-top-tabs react-native-tab-view
 
 npx expo start
