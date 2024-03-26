@@ -14,3 +14,5 @@ npm install @react-navigation/stack
 
 - If you're on a Mac and developing for iOS, you also need to install the pods (via Cocoapods) to complete the linking.
 - npx pod-install ios
+
+npx expo start
