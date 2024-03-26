@@ -2,16 +2,16 @@ import * as React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SharedTransition } from 'react-native-reanimated';
+import { SharedTransition, withSpring } from 'react-native-reanimated';
 import Animated from 'react-native-reanimated';
 
 const customTransition = SharedTransition.custom((values) => {
   'worklet';
   return {
-    height: values.targetHeight,
-    width: values.targetWidth,
-    originX: values.targetOriginX,
-    originY: values.targetOriginY,
+    height: withSpring(values.targetHeight),
+    width: withSpring(values.targetWidth),
+    originX: withSpring(values.targetOriginX),
+    originY: withSpring(values.targetOriginY),
   };
 });
 
