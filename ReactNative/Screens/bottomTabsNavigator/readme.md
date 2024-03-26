@@ -1,4 +1,4 @@
-# Process instalation and execution of this sample
+# Installation and execution of this sample
 
 Sample from https://reactnavigation.org/docs/bottom-tab-navigator
 
