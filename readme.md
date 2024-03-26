@@ -4,4 +4,4 @@
  
 > - React Native
    > - Screens
-      > -  Stack Navigator
+      > - Stack Navigator
