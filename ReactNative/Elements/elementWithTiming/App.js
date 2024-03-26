@@ -23,6 +23,9 @@ export default function App() {
     );
   }, []);
 
+
+  
+
   return (
     <View style={styles.container}>
       <Animated.View style={[styles.box, animatedStyles]} />
