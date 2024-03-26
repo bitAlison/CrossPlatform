@@ -1,7 +1,7 @@
 # Cross platform projects
 
->> WITH:
+
  
-- React Native
-    Screens
-        Stack Navigator
+> - React Native
+   > - Screens
+      > -  Stack Navigator
