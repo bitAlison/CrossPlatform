@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fileManagement",
-    "slug": "fileManagement",
+    "name": "gifManagement",
+    "slug": "gifManagement",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
